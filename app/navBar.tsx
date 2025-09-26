@@ -38,9 +38,10 @@ export default function NavBar() {
         <SiCodersrank size={32} />
         <nav className='flex items-center py-4 justify-between w-[350px]'>
           <Link className='dark:text-white dark:hover:text-gray-500 transition-all hover:text-gray-500 text-gray-900 hover:border-b hover:border-gray-500 border-b border-transparent ' href='/'>Home</Link>
-          <Link className='dark:text-white dark:hover:text-gray-500 transition-all hover:text-gray-500 text-gray-900 hover:border-b hover:border-gray-500 border-b border-transparent ' href='/'>About</Link>
-          <Link className='dark:text-white dark:hover:text-gray-500 transition-all hover:text-gray-500 text-gray-900 hover:border-b hover:border-gray-500 border-b border-transparent ' href='/'>Test</Link>
+          <Link className='dark:text-white dark:hover:text-gray-500 transition-all hover:text-gray-500 text-gray-900 hover:border-b hover:border-gray-500 border-b border-transparent ' href='/about'>About</Link>
+          <Link className='dark:text-white dark:hover:text-gray-500 transition-all hover:text-gray-500 text-gray-900 hover:border-b hover:border-gray-500 border-b border-transparent ' href='/test'>Test</Link>
           <Link className='dark:text-white dark:hover:text-gray-500 transition-all hover:text-gray-500 text-gray-900 hover:border-b hover:border-gray-500 border-b border-transparent ' href='/contact'>Contact</Link>
+          <Link className='dark:text-white dark:hover:text-gray-500 transition-all hover:text-gray-500 text-gray-900 hover:border-b hover:border-gray-500 border-b border-transparent ' href='/learning'>Learning</Link>
         </nav>
 
         <button onClick={toggleDarkMode}>

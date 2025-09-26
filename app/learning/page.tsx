@@ -1,15 +1,25 @@
-import articles from "../db"
+import Link from "next/link";
+import { getCourses } from "../../src/server/request";
 
-export const LearningPage: React.FC = () => {
+type itemType = {
+    id: number;
+    title: string;
+    path: string
+};
 
-    return <ul className="mt-6">
+export default async function LearningPage() {
+    const courses = await getCourses();
+
+    return <ul className="mt-7">
         {
-            articles?.map((item, index) => {
-                return <li key={index} className="transition hover:translate-y-1 p-3 border rounded-lg mb-3">
-                    <span className="inline-block p-2 bg-yellow-500 rounded-lg text-white mr-3">{item.type}</span>
-                    <span className="inline-block p-2 bg-green-600 rounded-lg text-white">{item.level}</span>
-                    <h2 className="mb-2 text-center">{item.title}</h2>
-                    <p >{item.text}</p>
+            courses?.map((item: itemType, index: number) => {
+                return <li key={index} className="transition hover:translate-y-[-6px] p-3 border rounded-lg mb-4">
+
+                    <Link href={`/learning/${item.id}`}>
+
+                        <h2 className="mb-2 text-center">{item.title}</h2>
+                    </Link>
+
                 </li>
             })
         }
